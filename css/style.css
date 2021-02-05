@@ -1,0 +1,249 @@
+
+/* colour variables */
+:root {
+    --mainBackground: #ffffff;
+    --mainFontColor: #434343;
+    --logoBlue: #66809A; /* also Primary Nav Hover colour */
+    --portfolio1Bg: #EEF0E9;
+    --portfolio2Bg: #EFECEE;
+    --portfolio3Bg: #F9F6F6;
+    --portfolio4Bg: #EFF3F7;
+}
+
+/* default style for entire page */
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*background-color: #cc0000;  test colour */
+    background-color: var(--mainBackgroud);
+    font-size: 18px;
+}
+
+
+/* creating Grid */
+main {
+    display: grid;
+    grid-template-rows: 180px 250px 250px auto 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "logo header primaryNavHeader primaryNavHeader"
+        "contentBanner1 contentBanner1 contentBanner2 contentBanner2"
+        "contentBanner3 contentBanner3 contentBanner4 contentBanner4"
+        "introText introText introText whiteSpace"
+        "copyright footer footer footerLinks";
+}
+
+/*** Grid Areas 4 columns x 5 rows (see grid-template-areas above) ***/
+/* Header Grid Area (3) */
+.logo {
+    grid-area: logo;
+    padding: 20px; 
+    /* same padding as .header and primaryNavHeader */
+}
+
+.header {
+    grid-area: header;
+    padding: 20px;
+    /* same padding as .header and primaryNavHeader */
+}
+
+.primaryNavHeader {
+    grid-area: primaryNavHeader;
+    background-color :#ffffff;
+    text-align: right;
+    padding: 20px;
+    /* same padding as .header and primaryNavHeader */
+}
+
+/* Banners Grid Area (4) */
+.contentBanner1 {
+    grid-area: contentBanner1;
+    padding: 50px;
+    background-color: var(--portfolio1Bg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentBanner2 {
+    grid-area: contentBanner2;
+    padding: 50px;
+    background-color: var(--portfolio2Bg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentBanner3 {
+    grid-area: contentBanner3;
+    padding: 50px;
+    background-color: var(--portfolio3Bg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentBanner4 {
+    grid-area: contentBanner4;
+    padding: 50px;
+    background-color: var(--portfolio4Bg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Intro Text Grid Areas (2) */
+.introText {
+    grid-area: introText;
+    padding: 20px;
+    color: var(--mainFontColor);
+    background-color: var(--mainBackgroud);
+}
+
+.whiteSpace {
+    grid-area: whiteSpace;
+    padding: 20px;
+}
+
+/* Footer Grid Areas (3) */
+.copyright {
+    grid-area: copyright;
+    background-color: var(--mainBackgroud);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--mainBackground);
+}
+
+.footerLinks {
+    grid-area: footerLinks;
+    background-color: var(--mainBackground);
+}
+
+/* formatting primary Navigation links */
+a.primaryNav:link {
+    color: var(--mainFontColor);
+    text-decoration: none;
+    font-size: 18px;
+    text-align: right;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    word-spacing: 100px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    padding: 30px;
+}
+
+a.primaryNav:visited {
+    color: var(--mainFontColor);
+    text-decoration: none;
+    font-size: 18px;
+    text-align: right;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    word-spacing: 100px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    padding: 30px;
+}
+
+a.primaryNav:hover {
+    color: var(--logoBlue);
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: right;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    word-spacing: 100px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    padding: 30px;
+}
+
+a.primaryNav:active {
+    color: var(--mainFontColor);
+    text-decoration: none;
+    font-size: 18px;
+    text-align: right;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    word-spacing: 100px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    padding: 30px;
+}
+
+/* formatting email links */
+a.email:link {
+    color: var(--mainFontColor);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: noraml;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+a.email:visited {
+    color: var(--mainFontColor);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+a.email:hover {
+    color: var(--logoBlue);
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+a.email:active {
+    color: var(--mainFontColor);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+
+/* Content Banner Divs */
+.contentBannerText {
+    color: var(--mainFontColor);
+    text-align: left;
+}
+
+
+/* formatting regular text and links */
+p {
+    line-height: 1.25;
+}
+
+h1.homepage{
+    color: var(--mainFontColor); 
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 20px;
+}
