@@ -118,17 +118,20 @@ main {
     grid-area: copyright;
     background-color: var(--mainBackgroud);
     font-size: 14px;
+    padding: 15px;
 }
 
 .footer {
     grid-area: footer;
     background-color: var(--mainBackground);
+    padding: 15px;
 }
 
 .footerLinks {
     grid-area: footerLinks;
     background-color: var(--mainBackground);
     justify-self: end;
+    padding: 15px;
 }
 
 /* formatting primary Navigation links */
